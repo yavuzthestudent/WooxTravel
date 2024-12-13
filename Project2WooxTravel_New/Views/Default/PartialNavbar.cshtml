@@ -1,0 +1,86 @@
+﻿@model Project2WooxTravel_New.Entities.Reservation
+
+<div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="/Default/Index" class="logo">
+                        <img src="~/wooxtravel-1.0.0/assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="/Default/Index" class="active">Ana Sayfa</a></li>
+                        <li>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="background-color: white; color: #22b3c1; border: none; font-weight:bold">Rezervasyon</button>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<form class="form-group" method="post" action="/Default/ReservationModal/">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: #22b3c1">Rezervasyon İşlemleri</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <label class="form-label" style="color: black">İsim</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    <br />
+                    <label class="form-label" style="color: black">Telefon</label>
+                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                    <br />
+                    <label class="form-label" style="color: black">Kişi Sayısı</label>
+                    @Html.TextBoxFor(x => x.PersonCount, new { @class = "form-control" })
+                    <br />
+                    <label class="form-label" style="color: black">Rezervasyon Tarihi</label>
+                    @Html.TextBoxFor(x => x.ReservationDate, new { @class = "form-control" })
+                    <br />
+                    <label class="form-label" style="color: black">Açıklama</label>
+                    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>

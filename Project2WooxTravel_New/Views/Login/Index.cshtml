@@ -1,0 +1,78 @@
+﻿@model Project2WooxTravel_New.Entities.Admin
+@{
+    Layout = null;
+}
+
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <form method="post">
+        <div class="container">
+            <br /><br />
+            <div class="alert alert-primary"><h3>Kullanıcı Giriş Sayfası</h3></div>
+            <label>Kullanıcı Adınız</label>
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+            <br />
+            <label>Şifreniz</label>
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-primary">Giriş Yap</button>
+        </div>
+    </form>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        input::placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <section>
+        <form method="post">
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="">
+                        <h2>WoOx Travel</h2>
+                        <h2>Admin Login</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            
+                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control",@placeholder="Kullanıcı Adı"})
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                                                     
+                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @placeholder = "Şifre" })
+                        </div>
+                        <div class="forget">
+                            <label>
+                                <input type="checkbox"> Beni Hatırla
+                            </label>
+                            <label>
+                                <a href="#">Şifremi Unuttum</a>
+                            </label>
+                        </div>
+                        <button>Giriş Yap</button>
+                        <div class="register">
+                            <p>Hesabınız mı yok ? <a href="/Register/Index">Kayıt Ol</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- partial -->
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+</body>
+</html>
+
+
+<link href="~/wooxtravel-1.0.0/assets/css/Login.css" rel="stylesheet" />

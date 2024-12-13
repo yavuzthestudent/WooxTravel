@@ -1,0 +1,29 @@
+﻿@model Project2WooxTravel_New.Entities.Category
+@{
+    ViewBag.Title = "NewCategory";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <div class="container">
+        <div class="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Kategori İşlemleri</div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table mt-3">
+                                <h3>Kategori Güncelleme</h3>
+                                @Html.HiddenFor(x=>x.CategoryId)
+                                @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+                            </table>
+                            <button class="btn btn-primary">Güncelle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

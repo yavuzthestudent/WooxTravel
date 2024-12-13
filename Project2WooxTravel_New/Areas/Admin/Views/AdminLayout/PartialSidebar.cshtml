@@ -1,0 +1,188 @@
+﻿<div class="sidebar" data-background-color="dark">
+    <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="dark">
+            <a href="/kaiadmin-lite-1.2.0/index.html" class="logo">
+                <img src="/kaiadmin-lite-1.2.0/assets/img/kaiadmin/logo_light.svg"
+                     alt="navbar brand"
+                     class="navbar-brand"
+                     height="20" />
+            </a>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                    <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                    <i class="gg-menu-left"></i>
+                </button>
+            </div>
+            <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+            </button>
+        </div>
+        <!-- End Logo Header -->
+    </div>
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse"
+                       href="#dashboard"
+                       class="collapsed"
+                       aria-expanded="false">
+                        <i class="fas fa-home"></i>
+                        <p>Dashboard</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="dashboard">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/Dashboard/Index">
+                                    <span class="sub-item">Dashboard Sayfası</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-section">
+                    <span class="sidebar-mini-icon">
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                    <h4 class="text-section">İŞLEMLER</h4>
+                </li>
+                
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarLayouts">
+                        <i class="fas fa-th-list"></i>
+                        <p>Profil</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="sidebarLayouts">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/Profile/Index">
+                                    <span class="sub-item">Profil Bilgisi</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#forms">
+                        <i class="fas fa-pen-square"></i>
+                        <p>Kategoriler</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="forms">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/Category/CategoryList">
+                                    <span class="sub-item">Kategori Listesi</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">@*active submenu*@
+                    <a data-bs-toggle="collapse" href="#tables">
+                        <i class="	fa fa-map-marker"></i>
+                        <p>Destinasyon</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="tables">
+                        <ul class="nav nav-collapse">
+                            <li >@*class="active"*@
+                                <a href="/Admin/Destination/CreateDestination">
+                                    <span class="sub-item">Destinasyon Ekle</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Destination/DestinationList">
+                                    <span class="sub-item">Destinasyon Listesi</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#maps">
+                        <i class="	fa fa-envelope"></i>
+                        <p>Mesajlar</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="maps">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/Message/Inbox">
+                                    <span class="sub-item">Inbox</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Message/Sendbox">
+                                    <span class="sub-item">Sendbox</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Message/SendMessage">
+                                    <span class="sub-item">Yeni Mesaj Gönder</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#charts">
+                        <i class="far fa-chart-bar"></i>
+                        <p>Charts</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="charts">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/Chart/LineChart">
+                                    <span class="sub-item">Line Chart</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Chart/BarChart">
+                                    <span class="sub-item">Bar Chart</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Chart/MultiLineChart">
+                                    <span class="sub-item">Multiline Chart</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Chart/MultiBarChart">
+                                    <span class="sub-item">Multi Bar Chart</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Chart/DonutChart">
+                                    <span class="sub-item">Donut Chart</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a @*data-bs-toggle="collapse"*@ href="/Admin/CreditCard/Index">
+                        <i class="fas fa-credit-card"></i>
+                        <p>Kredi Kartı Animasyonu</p>
+                        <span class="caret"></span>
+                    </a>
+                    @*<div class="collapse" id="charts">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/CreditCard/Index">
+                                    <span class="sub-item">Kredi Kartı Animasyonu</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>*@
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model Project2WooxTravel_New.Entities.Category
+@{
+    ViewBag.Title = "NewCategory";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <div class="container">
+        <div class="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Kategori İşlemleri</div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table mt-3">
+                                <h3>Yeni Kategori</h3>
+                                @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+                            </table>
+                            <button class="btn btn-primary" onclick="displayAlert()">Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function displayAlert() {
+        Swal.fire({
+            title: "İşlem Başarılı !",
+            text: "Yeni Kategori Eklendi",
+            icon: "success"
+        });
+    }
+</script>
+
